@@ -1,0 +1,31 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+.Navbar{
+background: linear-gradient(90deg, #d7ffc9, #ffb889);
+}
+
+.hero-section {
+  padding: 80px 0;
+  background: linear-gradient(90deg, #d7ffc9, #ffb889);
+}
+
+.rocket-img {
+  width: 600px;
+}
+
+.nav-simple {
+  text-decoration: none;
+  padding: 6px 12px;
+  color: #000;
+  border-radius: 4px;
+  transition: 0.2s ease;
+  font-weight: 500;
+}
+
+/* Ketika link aktif (mirip screenshot kamu) */
+.nav-simple.active {
+  background-color: #e63946; /* merah */
+  color: #fff !important;
+}
