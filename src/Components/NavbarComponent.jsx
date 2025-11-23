@@ -3,35 +3,53 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import ButtonComponent from "./Button";
 import { NavLink } from "react-router-dom";
-import { navLinks } from "../data/index";
+import { useState, useEffect } from "react";
 
 function NavbarComponent() {
+  const [changeColor, setChangeColor] = useState(false);
+
+  useEffect(() => {
+    const changeBackgroundColor = () => {
+      setChangeColor(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", changeBackgroundColor);
+    changeBackgroundColor(); // cek awal
+
+    return () => {
+      window.removeEventListener("scroll", changeBackgroundColor);
+    };
+  }, []);
+
   return (
-    <Navbar bg="light" expand="lg" className="Navbar py-3 ">
+    <Navbar
+      expand="lg"
+      className={`navbar ${changeColor ? "color-active" : ""}`}
+    >
       <Container>
-        {/* Brand */}
         <Navbar.Brand className="fw-bold fs-3">Han Course.</Navbar.Brand>
 
-        {/* Toggle Button */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Collapse id="basic-navbar-nav">
-          {/* Menu kiri */}
-          <Nav className="me-auto d-flex gap-3 fs-6 fw-normal mx-auto align-items-center">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.id}
-                to={link.path}
-                className={({ isActive }) =>
-                  isActive ? "nav-simple active" : "nav-simple"
-                }
-              >
-                {link.text}
-              </NavLink>
-            ))}
+          <Nav className="main-nav me-auto d-flex gap-4 fs-6 fw-normal mx-auto align-items-center">
+            <NavLink to="/" className="nav-item-link">
+              Home
+            </NavLink>
+            <NavLink to="/kelas" className="nav-item-link">
+              Kelas
+            </NavLink>
+            <NavLink to="/testimonial" className="nav-item-link">
+              Testimonial
+            </NavLink>
+            <NavLink to="/faq" className="nav-item-link">
+              Faq
+            </NavLink>
+            <NavLink to="/syarat" className="nav-item-link">
+              Syarat & Ketentuan
+            </NavLink>
           </Nav>
 
-          {/* Tombol di kanan */}
           <div className="text-center mt-3 mt-lg-0">
             <ButtonComponent />
           </div>
