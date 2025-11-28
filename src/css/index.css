@@ -1,31 +1,139 @@
-*{
-    font-family: "Poppins", sans-serif;
+@import "tailwindcss";
+
+* {
+  font-family: "Poppins", sans-serif;
 }
 
-.Navbar{
-background: linear-gradient(90deg, #d7ffc9, #ffb889);
+/* Navbar CSS */
+/* Default navbar (awal, sebelum scroll) */
+/* Navbar default (belum discroll) */
+.navbar {
+  background: linear-gradient(90deg, #d7ffc9, #ee8874);
+  position: relative;     /* Biar TIDAK fixed */
+  width: 100%;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero-section {
-  padding: 80px 0;
-  background: linear-gradient(90deg, #d7ffc9, #ffb889);
+/* Navbar saat discroll */
+.navbar.color-active {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: fixed;      /* Aktif fixed hanya saat discroll */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;         /* Supaya tidak ketutup elemen lain */
 }
 
-.rocket-img {
-  width: 600px;
-}
-
-.nav-simple {
+/* Link menu */
+.main-nav .nav-item-link {
+  padding: 5px 10px;
+  position: relative;
   text-decoration: none;
-  padding: 6px 12px;
-  color: #000;
-  border-radius: 4px;
-  transition: 0.2s ease;
+  color: #333;
   font-weight: 500;
 }
 
-/* Ketika link aktif (mirip screenshot kamu) */
-.nav-simple.active {
-  background-color: #e63946; /* merah */
-  color: #fff !important;
+/* Underline animation */
+.main-nav .nav-item-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #333;
+  transition: width 0.2s ease-in-out;
+}
+
+.main-nav .nav-item-link:hover::after,
+.main-nav .nav-item-link.active::after {
+  width: 100%;
+}
+/* End Navbar */
+
+
+/* Hero CSS */
+.hero-section {
+  padding: 80px 0;
+  background: linear-gradient(90deg, #d7ffc9, #ee8874);
+}
+
+.rocket-img {
+  width: 650px;
+}
+/* End Hero */
+
+/* Testimonial */
+/* Section background */
+.testimonial-section {
+  background: #fafafa;
+}
+
+/* Card style */
+.testimonial-card {
+  border: none;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Avatar style */
+.testimonial-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e63946;
+}
+
+/* Text */
+.testimonial-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+
+/* FAQ */
+.faq-section {
+  background: #f9f9f9;
+}
+
+.accordion-item {
+  border-radius: 12px !important;
+  overflow: hidden;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.accordion-button {
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 18px 22px;
+}
+
+/* Saat accordion aktif (terbuka) */
+.accordion-button:not(.collapsed) {
+  background-color: #e63946 !important; /* warna merah */
+  color: #fff !important;               /* teks jadi putih */
+  box-shadow: none !important;
+}
+
+/* Icon arrow juga jadi putih */
+.accordion-button:not(.collapsed)::after {
+  filter: invert(1);
+}
+
+/* Background body saat terbuka */
+.accordion-body {
+  background-color: #ffe5e7; /* warna soft pink agar kontras */
+  color: #333;
 }

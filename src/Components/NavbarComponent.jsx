@@ -27,7 +27,9 @@ function NavbarComponent() {
       className={`navbar ${changeColor ? "color-active" : ""}`}
     >
       <Container>
-        <Navbar.Brand className="fw-bold fs-3">Han Course.</Navbar.Brand>
+        <Navbar.Brand as={NavLink} to="/" className="fw-bold fs-3">
+          Han Course.
+        </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 

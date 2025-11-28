@@ -1,6 +1,6 @@
 function HeroPage() {
   return (
-    <div className="hero-section d-flex align-items-center">
+    <div className="hero-section d-flex align-items-center w-100 min-vh-100">
       <div className="container d-flex justify-content-between align-items-center flex-wrap">
         {/* Left Text */}
         <div className="hero-left" style={{ maxWidth: "500px" }}>

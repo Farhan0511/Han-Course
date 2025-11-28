@@ -1,44 +1,17 @@
-import KelasImage1 from "../assets/img/kelas/kelas-1.jpg";
-import KelasImage2 from "../assets/img/kelas/kelas-2.jpg";
-import KelasImage3 from "../assets/img/kelas/kelas-3.jpg";
-import KelasImage4 from "../assets/img/kelas/kelas-4.jpg";
-import KelasImage5 from "../assets/img/kelas/kelas-5.jpg";
-import KelasImage6 from "../assets/img/kelas/kelas-6.jpg";
-import KelasImage7 from "../assets/img/kelas/kelas-7.jpg";
-import KelasImage8 from "../assets/img/kelas/kelas-8.jpg";
-import KelasImage9 from "../assets/img/kelas/kelas-9.jpg";
+import KelasImage1 from "../assets/img/kelas/kelas1.jpg";
+import KelasImage2 from "../assets/img/kelas/kelas2.png";
+import KelasImage3 from "../assets/img/kelas/kelas3.png";
+import KelasImage5 from "../assets/img/kelas/kelas5.jpeg";
+import KelasImage6 from "../assets/img/kelas/kelas6.jpg";
+import KelasImage7 from "../assets/img/kelas/kelas7.jpg";
+import KelasImage9 from "../assets/img/kelas/kelas9.jpg";
+import KelasImage10 from "../assets/img/kelas/kelas10.jpg";
 
 import People1 from "../assets/img/testimonial/people-1.jpg";
 import People2 from "../assets/img/testimonial/people-2.jpg";
 import People3 from "../assets/img/testimonial/people-3.jpg";
 
-export const navLinks = [
-  {
-    id: 1,
-    path: "/",
-    text: "Home",
-  },
-  {
-    id: 2,
-    path: "kelas",
-    text: "Kelas",
-  },
-  {
-    id: 3,
-    path: "testimonial",
-    text: "Testimonial",
-  },
-  {
-    id: 4,
-    path: "faq",
-    text: "FAQ",
-  },
-  {
-    id: 5,
-    path: "syaratketen",
-    text: "Syarat & Ketentuan",
-  },
-];
+
 
 export const semuaKelas = [
   {
@@ -81,19 +54,6 @@ export const semuaKelas = [
     delay: "1900",
   },
   {
-    id: 4,
-    image: KelasImage4,
-    star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star",
-    title: "Mastering Logo with Adobe Illustrator",
-    price: "Rp. 420.000",
-    buy: "Beli Kelas",
-    delay: "",
-  },
-  {
     id: 5,
     image: KelasImage5,
     star1: "fa-solid fa-star",
@@ -101,7 +61,7 @@ export const semuaKelas = [
     star3: "fa-solid fa-star",
     star4: "fa-solid fa-star",
     star5: "fa-solid fa-star",
-    title: "3D Modelling for Beginner with 3D Blender",
+    title: "3D Modelling for Beginner",
     price: "Rp. 380.000",
     buy: "Beli Kelas",
     delay: "300",
@@ -133,19 +93,6 @@ export const semuaKelas = [
     delay: "",
   },
   {
-    id: 8,
-    image: KelasImage8,
-    star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star-half-stroke",
-    title: "UI UX Design with Adobe XD for Beginner",
-    price: "Rp. 400.000",
-    buy: "Beli Kelas",
-    delay: "300",
-  },
-  {
     id: 9,
     image: KelasImage9,
     star1: "fa-solid fa-star",
@@ -154,6 +101,19 @@ export const semuaKelas = [
     star4: "fa-solid fa-star",
     star5: "fa-solid fa-star-half-stroke",
     title: "Mastering Mobile Developer with Flutter",
+    price: "Rp. 320.000",
+    buy: "Beli Kelas",
+    delay: "600",
+  },
+  {
+    id: 10,
+    image: KelasImage10,
+    star1: "fa-solid fa-star",
+    star2: "fa-solid fa-star",
+    star3: "fa-solid fa-star",
+    star4: "fa-solid fa-star",
+    star5: "fa-solid fa-star-half-stroke",
+    title: "Mastering Mobile Developer with Kotlin",
     price: "Rp. 320.000",
     buy: "Beli Kelas",
     delay: "600",
@@ -199,19 +159,6 @@ export const kelasTerbaru = [
     price: "Rp. 280.000",
     buy: "Beli Kelas",
     delay: "400",
-  },
-  {
-    id: 4,
-    image: KelasImage4,
-    star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star",
-    title: "Mastering Logo with Adobe Illustrator",
-    price: "Rp. 420.000",
-    buy: "Beli Kelas",
-    delay: "",
   },
   {
     id: 5,
