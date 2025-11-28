@@ -1,15 +1,27 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { semuaKelas } from "../data/index";
+import { NavLink } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
 
 function KelasComponent() {
   return (
-    <div className="KelasComponent mt-5">
-      <h2 className="text-center">
-        Kelas <span className="">Kami</span>
-      </h2>
+    <div className="KelasComponent mt-4">
+      <div className="text-center mb-5">
+        <h2 className="fw-bold mb-3" style={{ fontSize: "2.2rem" }}>
+          Kelas <span style={{ color: "#e63946" }}>Terbaru</span>
+        </h2>
 
-      <div className="d-flex flex-wrap gap-4 container">
+        <p
+          className="fs-5 text-secondary"
+          style={{ maxWidth: "650px", margin: "0 auto" }}
+        >
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam,
+          reprehenderit.
+        </p>
+      </div>
+
+      <div className="d-flex flex-wrap gap-4 container justify-content-center">
         {semuaKelas.map((kelas) => (
           <Card
             key={kelas.id}
@@ -48,6 +60,16 @@ function KelasComponent() {
             </Card.Body>
           </Card>
         ))}
+      </div>
+      <div className="text-center mt-5">
+        <Button
+          variant="danger"
+          className="d-inline-flex align-items-center gap-2 px-4 py-2"
+          as={NavLink} to="/kelas"
+        >
+          Lihat Semua Kelas
+          <FaArrowRight size={16} />
+        </Button>
       </div>
     </div>
   );
